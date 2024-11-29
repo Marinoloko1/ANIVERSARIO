@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EL AMOR DE MI VIDA</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">EL CODIGO DEL AMOR</span><br />
+			<span class="space"/><span class="comments">**/</span><br />
+			Hola amor !<br />
+			Recuerdas cuando empezo todo?<br />
+			<span class="comments">Pues fue un viernes. </span><br />
+			Desde ese día una chispa comenzó;<br />
+			<span class="comments">Lo recuerdo muy bien.</span><br />
+			Fue afuera de la enfermeria <br />
+			Hibas caminando<br />
+			Y entonces te mire<br />
+			Y pense, ¡wow que hermosa es!<br />
+			Entonces me acerque para pedirte tu numero. <br />
+			Desde esa vez mi vida cambio mucho<br />
+			En ese entonces no tenia ni idea de que te convertirias en quien eres ahora<br />
+			La persona mas importante de mi vida<br />
+			Aveces no puedo creer lo afortunado que soy de que me eligieras <br />
+			Hemos pasado por muchas cosas juntos mi niña y nunca debi dudar de que tambien superariamos esto <br />
+			Pero me asuste y te lastime.<br />
+			Me lastime.<br />
+			Lo siento muchisimo,<br />
+			Por supuesto que no debi haber tomado,<br />
+			Me siento mal por haberlo hecho <br />
+			Quiero ser el chico el que este a tu lado<br />
+			No siempre sera facil pero quiero hacer lo que sea necesario para que esto funcione <br />
+			Por que eso es lo que haces cuando amas a alguien <br />
+			En fin son solo unos años mi niña hermosa<br />
+			Te amare Vero. Ahora y para siempre.<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.webp"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					NUESTRO AMOR POR SIEMPRE
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					TE AMO MUCHO<br/>
+					<div class="signature">- ANGEL</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2024, 6, 28);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
